@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Scripting') {
             steps {
-                parallel{
+                parallel(
                     "TaskOne":{
                         echo 'task one job1'
                         echo 'task one job2'
@@ -23,7 +23,7 @@ pipeline {
                         echo 'task two job1'
                         echo 'task two job2'
                     }
-                }
+                )
             }
         }
     }
